@@ -71,6 +71,14 @@ NSString static *const kYTPlayerSyndicationRegexPattern = @"^https://tpc.googles
 
 @implementation YTPlayerView
 
+- (nonnull instancetype)initWithOriginURL:(nonnull NSURL*)originURL {
+    self = [super init];
+    if (self) {
+        _originURL = originURL;
+    }
+    return self;
+}
+
 - (BOOL)loadWithVideoId:(NSString *)videoId {
   return [self loadWithVideoId:videoId playerVars:nil];
 }

@@ -157,6 +157,8 @@ typedef void (^YTPlaybackQualityCompletionHandler)(YTPlaybackQuality result,
 /** A delegate to be notified on playback events. */
 @property(nonatomic, weak, nullable) id<YTPlayerViewDelegate> delegate;
 
+- (nonnull instancetype)initWithOriginURL:(nonnull NSURL*)originURL;
+
 /**
  * This method loads the player with the given video ID.
  * This is a convenience method for calling YTPlayerView::loadPlayerWithVideoId:withPlayerVars:
